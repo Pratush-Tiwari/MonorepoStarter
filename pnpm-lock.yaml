@@ -46,7 +46,7 @@ importers:
     dependencies:
       '@coursenew/shared':
         specifier: workspace:*
-        version: link:../../packages/shared
+        version: link:../../shared
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -89,7 +89,7 @@ importers:
     dependencies:
       '@coursenew/shared':
         specifier: workspace:*
-        version: link:../../packages/shared
+        version: link:../../shared
       react:
         specifier: ^19.1.0
         version: 19.1.1
@@ -131,11 +131,11 @@ importers:
         specifier: ^7.0.4
         version: 7.0.6(@types/node@24.1.0)
 
-  packages/shared:
+  shared:
     devDependencies:
       typescript:
-        specifier: ^5.0.0
-        version: 5.8.3
+        specifier: ^5.9.2
+        version: 5.9.2
 
 packages:
 

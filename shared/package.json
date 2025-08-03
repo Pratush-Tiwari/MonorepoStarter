@@ -1,0 +1,24 @@
+{
+  "name": "@coursenew/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities, types, and constants for the coursenew monorepo",
+  "main": "index.ts",
+  "type": "module",
+  "exports": {
+    "./types": "./types/index.ts",
+    "./types/index": "./types/index.ts",
+    "./utils": "./utils/index.ts",
+    "./utils/index": "./utils/index.ts",
+    "./helpers": "./helpers/index.ts",
+    "./helpers/index": "./helpers/index.ts",
+    "./constants": "./constants/index.ts",
+    "./constants/index": "./constants/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

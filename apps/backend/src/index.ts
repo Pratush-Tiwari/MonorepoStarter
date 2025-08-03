@@ -3,8 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import { createApiResponse } from '@coursenew/shared';
-import type { ApiResponse } from '@coursenew/shared';
+import { createApiResponse } from '@coursenew/shared/utils/index';
+import type { ApiResponse } from '@coursenew/shared/types/index';
 
 // Load environment variables
 dotenv.config();

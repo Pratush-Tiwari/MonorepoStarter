@@ -23,9 +23,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/shared/*": ["../packages/shared/src/*"]
+      "@/shared/*": ["./shared/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "build"]
+  "files": [],
+  "references": [
+    { "path": "./apps/frontend" },
+    { "path": "./apps/backend" },
+    { "path": "./shared" }
+  ]
 }
