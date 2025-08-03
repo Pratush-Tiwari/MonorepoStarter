@@ -4,6 +4,7 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+import prettierPlugin from 'eslint-plugin-prettier';
 import prettier from 'eslint-config-prettier';
 
 export default [
@@ -41,6 +42,7 @@ export default [
       react,
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
+      prettier: prettierPlugin,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -56,6 +58,21 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: true,
+          semi: true,
+          trailingComma: 'es5',
+          printWidth: 80,
+          tabWidth: 2,
+          useTabs: false,
+          bracketSpacing: true,
+          bracketSameLine: false,
+          arrowParens: 'avoid',
+          endOfLine: 'lf',
+        },
+      ],
     },
     settings: {
       react: {
