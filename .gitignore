@@ -97,4 +97,5 @@ ehthumbs.db
 Thumbs.db
 
 # Turbo
-.turbo 
+.turbo/
+*.tsbuildinfo 
