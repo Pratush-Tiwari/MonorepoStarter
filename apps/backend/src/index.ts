@@ -6,9 +6,6 @@ import dotenv from 'dotenv';
 import { createApiResponse } from '@coursenew/shared';
 import type { ApiResponse } from '@coursenew/shared';
 
-// Import routes
-import userRoutes from './routes/users.ts';
-
 // Load environment variables
 dotenv.config();
 
@@ -21,24 +18,6 @@ app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Routes
-app.use('/api/users', userRoutes);
-
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-  const response: ApiResponse<{ status: string; timestamp: string }> =
-    createApiResponse(
-      true,
-      {
-        status: 'OK',
-        timestamp: new Date().toISOString(),
-      },
-      undefined,
-      'Server is running'
-    );
-  res.json(response);
-});
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -88,8 +67,7 @@ app.use(
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`👥 Users API: http://localhost:${PORT}/api/users`);
+  console.log(`📊 Root endpoint: http://localhost:${PORT}/`);
 });
 
 export default app;
