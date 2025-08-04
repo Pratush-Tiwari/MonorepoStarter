@@ -48,8 +48,8 @@ coursenew/
 
 3. **Access the applications**:
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5001
-   - Health Check: http://localhost:5001/
+   - Backend API: http://localhost:4000
+   - Health Check: http://localhost:4000/
 
 ### Alternative: Start Individual Apps
 
@@ -107,7 +107,7 @@ pnpm type-check   # Run TypeScript type checking ✅
 ```bash
 cd apps/backend
 
-pnpm dev          # Start development server with nodemon (port 5001) ✅
+pnpm dev          # Start development server with nodemon (port 4000) ✅
 pnpm build        # Build TypeScript to JavaScript ✅
 pnpm start        # Start production server ✅
 pnpm lint         # Run ESLint ✅
@@ -135,16 +135,16 @@ The ESLint configuration includes Prettier integration, which means:
 
 ```bash
 # Health check
-curl http://localhost:5001/
+curl http://localhost:4000/
 
 # Get all users
-curl http://localhost:5001/api/users
+curl http://localhost:4000/api/users
 
 # Get specific user
-curl http://localhost:5001/api/users/1
+curl http://localhost:4000/api/users/1
 
 # Create a new user
-curl -X POST http://localhost:5001/api/users \
+curl -X POST http://localhost:4000/api/users \
   -H "Content-Type: application/json" \
   -d '{"name":"New User","email":"newuser@example.com"}'
 ```

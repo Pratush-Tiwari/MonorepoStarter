@@ -83,6 +83,7 @@ temp/
 # Editor directories and files
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 *~
@@ -95,6 +96,9 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# User input files
+userinput.py
 
 # Turbo
 .turbo/

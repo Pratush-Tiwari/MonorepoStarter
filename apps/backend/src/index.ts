@@ -10,7 +10,7 @@ import type { ApiResponse } from '@coursenew/shared/types/index';
 dotenv.config();
 
 const app: express.Application = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(helmet());
